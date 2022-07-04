@@ -1,23 +1,4 @@
 // Assignment Code
-// var generateBtn = document.querySelector("#generate");
-
-
-// Write password to the #password input
-// function writePassword() {
-//   var password = generatePassword();
-//   var passwordText = document.querySelector("#password");
-
-//   passwordText.value = password;
-
-// }
-
-// Add event listener to generate button
-// generateBtn.addEventListener("click", writePassword);
-
-
-// var password = document.getElementById("password");
-
-// Assignment Code
 var generateBtn = document.querySelector("#generate");
 var passwordLength = 0;
 var selectedChars = "";
@@ -40,19 +21,20 @@ var generatedPassword = "";
 
 function getPasswordLength() {
   passwordLength = 0;
-  // Ask user for desired number of characters in password, validate the input, default = 8 characters
+  // asks user for number of characters used in password, 8 is default
   while (true) {
     passwordLength = prompt("What length of password do you require? \n8 character minimum, 128 character maximum.", 8);
-    //Abort if null
+
     if (passwordLength == null) {
       return false;
     }
-    //Check for valid password length, exit function if valid
+
     if (parseInt(passwordLength) >= 8 && parseInt(passwordLength) <= 128) {
       return true;
     }
   }
 }
+
 
 function notOptions() {
   for (var i = 0; i < options.length; i++) {
@@ -61,11 +43,11 @@ function notOptions() {
 }
 
 function getPasswordCharSet(allCharacters) {
-  // Check arrays of equal length
+
   if (allCharacters.length !== options.length) {
     return false;
   }
-  // Ask user for password character criteria, store in array for future use, check at least one character set is selected
+  // promts given to user to select what they want in password, also alert given if user doesnt select any of promts given
   var isValid = false;
   while (!isValid) {
     options[0] = confirm("Include lowercase characters in the password?");
@@ -142,7 +124,7 @@ function generatePassword() {
       MakePassword(passwordLength);
       valCount++;
       if (valCount > 100) {
-        alert("Fate is not on your side! Please try again.");
+        alert("Please try again.");
         return "";
       }
     }
