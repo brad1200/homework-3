@@ -1,12 +1,6 @@
 // Assignment Code
 // var generateBtn = document.querySelector("#generate");
 
-// array of characters
-// var empty = [" "]
-// var uppercase = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
-// var lowercase = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
-// var symbols = ["!", "@", "#", "$", "%", "^", "&", "*", "_", "+", "(", ")"];
-// var numbers = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
 
 // Write password to the #password input
 // function writePassword() {
@@ -48,7 +42,7 @@ function getPasswordLength() {
   passwordLength = 0;
   // Ask user for desired number of characters in password, validate the input, default = 8 characters
   while (true) {
-    passwordLength = prompt("What length of password do you require? \n8 character minimum, 128 character maximum", 8);
+    passwordLength = prompt("What length of password do you require? \n8 character minimum, 128 character maximum.", 8);
     //Abort if null
     if (passwordLength == null) {
       return false;
